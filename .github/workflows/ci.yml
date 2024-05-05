@@ -67,7 +67,7 @@ jobs:
             exit 1
           fi
           resp=$(curl http://localhost:8001/find_rate -X POST -d "00000")
-          echo "$resp"
+          echo "'$resp'"
           if [[ $resp == "Rate not found" ]]; then
             echo -e "Execution Success!"
           else
